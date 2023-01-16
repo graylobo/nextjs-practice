@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        :root {
+            /* css 변수의 경우 dash가 2개이상 붙어야 함 */
+            --what: blue; 
+        }
+        .some {
+            background-color: var(--what);
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+    <body>
+        <div class="some"></div>
+    </body>
+</html>
