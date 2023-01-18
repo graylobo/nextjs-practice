@@ -1,83 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "../../styles/Home.module.css";
-import useTranslation from "next-translate/useTranslation";
-import { up } from "styled-breakpoints";
+import { up, down } from "styled-breakpoints";
 import styled, { ThemeProvider } from "styled-components";
 import { useBreakpoint } from "styled-breakpoints/react-styled";
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
-const Tab = [
-  {
-    title: "section1",
-    content: "im content 1",
-  },
-  {
-    title: "section2",
-    content: "im content 2",
-  },
-  {
-    title: "section3",
-    content: "im content 3",
-  },
-  {
-    title: "section4",
-    content: "im content 4",
-  },
-  {
-    title: "section5",
-    content: "im content 5",
-  },
-  {
-    title: "section6",
-    content: "im content 6",
-  },
-  {
-    title: "section7",
-    content: "im content 7",
-  },
-];
-const settings = {
-  loopFillGroupWithBlank: true,
-  slidesPerView: 4,
-  spaceBetween: 15,
-  navigation: {
-    prevEl: ".slide-prev",
-    nextEl: ".slide-next",
-  },
-  allowTouchMove: true,
-  modules: [Navigation],
-  // breakpoints: {
-  //   601: {
-  //     slidesPerView: 4
-  //   },
-  //   992: {
-  //     slidesPerView: 5
-  //   },
-  //   1220: {
-  //     slidesPerView: 6
-  //   }
-  // }
-};
-// in: 초기 탭 idx, 탭 리스트 out: 탭 리스트 아이템 , set인덱스
-const useTab = (
-  idx: number,
-  Tabs: {
-    title: string;
-    content: string;
-  }[]
-) => {
-  const [currentIdx, setCurrentIdx] = useState(idx);
-  return {
-    currentIdx,
-    currentItem: Tabs[currentIdx],
-    changeItem: setCurrentIdx,
-  };
-};
+import { useEffect, useState } from "react";
+import FormitTest from "../components/FormitTest";
+
 export default function Home() {
-  const { currentItem, currentIdx, changeItem } = useTab(0, Tab);
   return (
     <Wrapper>
       <Head>
@@ -87,67 +16,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="tabmenu">
-        <Swiper {...settings}>
-          {Tab.map((e, index) => (
-            <>
-              <SwiperSlide key={index} className="menusz">
-                <div key={index} className={index === currentIdx ? "isActive" : ""} onClick={(e) => changeItem(index)}>
-                  {e.title}
-                </div>
-                <div className="go">|</div>
-              </SwiperSlide>
-            </>
-          ))}
-          <button type="button" className="slide-prev">
-            prev
-          </button>
-          <button type="button" className="slide-next">
-            next
-          </button>
-        </Swiper>
-      </div>
-      <div className="test"></div>
-      <div>{currentItem.content}</div>
+      <Test />
     </Wrapper>
   );
 }
 
-const Wrapper = styled.div`
-  position: relative;
-  .tabmenu {
-    display: flex;
-    width: 500px;
-  }
-  .swiper {
-    position: unset;
-  }
+const Wrapper = styled.div``;
 
-  .slide-prev,
-  .slide-next {
-    position: absolute;
-    z-index: 1;
-    color: transparent;
-  }
-
-  .slide-prev {
-    background-image: url("/left-arrow@3x.webp");
-    background-repeat: no-repeat;
-  }
-
-  .slide-next {
-    background-image: url("/right-arrow@3x.webp");
-    background-repeat: no-repeat;
-  }
-  .go {
-    padding-left: 25px;
-  }
-  .menusz {
-    display: flex;
-    width: 100%;
-  }
-
-  .isActive {
-    border-bottom: 1px solid red;
-  }
+const Test = styled(FormitTest)`
+  width: 100px;
+  height: 100px;
+  background-color: red;
 `;

@@ -6,13 +6,14 @@ import theme, { breakPointTheme } from "../styles/theme";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/scrollbar";
 export default function App({ Component, pageProps }: AppProps) {
-    return (
-        <>
-            <ThemeProvider theme={{ ...theme, ...breakPointTheme }}>
-                <Globals />
-                <Component {...pageProps} />
-            </ThemeProvider>
-        </>
-    );
+  return (
+    <>
+      <ThemeProvider theme={{ ...theme, ...breakPointTheme }}>
+        <Globals />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
+  );
 }
