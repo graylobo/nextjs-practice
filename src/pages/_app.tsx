@@ -7,13 +7,20 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const queryClient = new QueryClient();
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ThemeProvider theme={{ ...theme, ...breakPointTheme }}>
-        <Globals />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <ReactQueryDevtools initialIsOpen={true} />
+        <ThemeProvider theme={{ ...theme, ...breakPointTheme }}>
+          <Globals />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </QueryClientProvider>
     </>
   );
 }

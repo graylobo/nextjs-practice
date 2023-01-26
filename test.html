@@ -1,38 +1,491 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <style>
-    .custom-combobox:after {
-      content: "<>";
-      font: 17px "Consolas", monospace;
-      transform: rotate(90deg);
-      position: absolute;
-      top: 20px;
-      pointer-events: none;
-      left: 290px;
-    }
-    select {
-      appearance: none;
-      width: 100%;
-      max-width: 320px;
-      height: 50px;
-      padding: 0px 24px;
-      font-size: 16px;
-    }
-  </style>
-  <body>
-    <div class="custom-combobox">
-      <select>
-        <option selected>Select Box</option>
-        <option>Option 1</option>
-        <option>Option 2</option>
-        <option>Last long option</option>
-      </select>
-    </div>
-  </body>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta property="og:title" content="ADAPT" /> 
+<meta property="og:description" content="어댑트는 꾸준히 사랑 받는 브랜드와 콘텐트를 만듭니다." />
+<meta name="naver-site-verification" content="96cb5a16b3b7137df69b86a173349a6c7bef016d" />
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+
+<title>어댑트</title>
+<link rel="stylesheet" href="https://www.adaptkorea.com/theme/adapt/css/default.css?ver=210618">
+<link rel="stylesheet" href="https://www.adaptkorea.com/js/font-awesome/css/font-awesome.min.css?ver=210618">
+<link rel="stylesheet" href="https://www.adaptkorea.com/theme/adapt/css/import.css">
+
+
+<!--[if lte IE 8]>
+<script src="https://www.adaptkorea.com/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "https://www.adaptkorea.com";
+var g5_bbs_url   = "https://www.adaptkorea.com/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "";
+var g5_sca       = "";
+var g5_editor    = "";
+var g5_cookie_domain = "";
+var g5_theme_shop_url = "https://www.adaptkorea.com/theme/adapt/shop";
+var g5_shop_url = "https://www.adaptkorea.com/shop";
+</script>
+<script src="https://www.adaptkorea.com/js/jquery-1.12.4.min.js?ver=210618"></script>
+<script src="https://www.adaptkorea.com/js/jquery-migrate-1.4.1.min.js?ver=210618"></script>
+<script src="https://www.adaptkorea.com/js/jquery.menu.js?ver=210618"></script>
+<script src="https://www.adaptkorea.com/js/common.js?ver=210618"></script>
+<script src="https://www.adaptkorea.com/js/wrest.js?ver=210618"></script>
+<script src="https://www.adaptkorea.com/js/placeholders.min.js?ver=210618"></script>
+<script src="https://www.adaptkorea.com/theme/adapt/js/swiper.min.js?ver=210618"></script>
+<script src="https://www.adaptkorea.com/theme/adapt/js/jquery.waypoints.min.js?ver=210618"></script>
+<script src="https://www.adaptkorea.com/theme/adapt/js/TweenMax.min.js?ver=210618"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js"></script>
+</head>
+<body>
+
+<!-- [s] wrapper -->
+<div id="wrapper" >
+	<div id="loading_box">		
+		<div class="loding_cont">
+			<div class="loding_logo"><img src="https://www.adaptkorea.com/theme/adapt/img/logo_adapt.png" alt="adapt"></div>		
+			<svg class="loading-circle">
+				<circle cx="50%" cy="50%" r="25"></circle>
+			</svg>	
+			<p>Loding...</p>
+		</div>							
+	</div>
+
+	<div id="skipToContent" class="skipnav">
+		<a href="#container">본문 바로가기</a>
+	</div>
+
+	<header id="header">
+		<h1 class="hidden"><img src="https://www.adaptkorea.com/theme/adapt/img/logo_adapt.png" alt="adapt"></h1>
+	</header>
+
+	<div id="container">
+		<section class="vs_video">		
+			<div class="vs_text">
+				<dl>
+					<dt class="ani">SOLVED <span></span> 'S PROBLEM</dt>
+					<dd class="ani">
+						WE LISTEN TO OUR CUSTOMER'S VOICE AND SOLVE A PROBLEM.<br>
+						WE CARE FOR THE LIVES OF OUR CUSTOMERS WITH GOOD PRODUCTS AND CONTENTS<br>
+						MADE AND REFINED WITH THE VOICE OF THEM.
+					</dd>
+				</dl>
+				<h2 class=""><img src="https://www.adaptkorea.com/theme/adapt/img/logo_adapt.png" alt="adapt"></h2>
+				<div class="vs_info infit ani">
+					<div class="vs_since">SINCE 2017<br>&copy; Adapt Inc.</div>
+					<div class="vs_int">
+						<ul>
+							<li>V-COMMERCE</li>
+							<li>CONTENTS</li>
+							<li>MARKETING</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="vs_video_box">
+				<div class="pc_video">
+					<video muted loop autoplay playsinline>
+						<source src="https://www.adaptkorea.com/theme/adapt/video/vs_video.mp4" type="video/mp4">      
+					</video>	
+				</div>
+				<div class="mo_video">
+					<video muted loop autoplay playsinline>
+						<source src="https://www.adaptkorea.com/theme/adapt/video/vs_video_mo.mp4" type="video/mp4">      
+					</video>	
+				</div>	
+			</div>					
+		</section>
+
+		<section class="brand">
+			<div class="brand_inner">
+				<h2 class="ani">BRAND</h2>
+				<div class="brand_slide ani">
+					<div class="brand_bi">
+						<div class="brand_bi_item"><img src="https://www.adaptkorea.com/theme/adapt/img/brand_odg_logo.png" alt=""></div>
+						<div class="brand_bi_item act"><img src="https://www.adaptkorea.com/theme/adapt/img/brand_leyer_logo.png" alt=""></div>
+						<div class="brand_bi_item"><img src="https://www.adaptkorea.com/theme/adapt/img/brand_obge_logo.png" alt=""></div>
+					</div>
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="br_video">
+									<video muted loop playsinline>
+										<source src="https://www.adaptkorea.com/theme/adapt/video/odg_homepage.mp4" type="video/mp4">      
+									</video>
+								</div>								
+							</div>
+							<div class="swiper-slide">
+								<div class="br_video">
+									<video muted loop playsinline>
+										<source src="https://www.adaptkorea.com/theme/adapt/video/layer_homepage.mp4" type="video/mp4">      
+									</video>
+								</div>								
+							</div>
+							<div class="swiper-slide">
+								<div class="br_video">
+									<video muted loop playsinline>
+										<source src="https://www.adaptkorea.com/theme/adapt/video/obge_homepage.mp4" type="video/mp4">      
+									</video>
+								</div>								
+							</div>						
+						</div>
+					</div>
+					<div class="brand_slide_arr">
+						<button type="button" class="prev_btn"></button>
+						<button type="button" class="next_btn"></button>
+					</div>
+				</div>
+				<p class="brand_desc ani">
+					어댑트는 꾸준히 사랑 받는 브랜드와 콘텐트를 만듭니다.<br class="mo_ver"><br class="pc_ver"> 고객님들과 바로 소통할 수 있는 D2C의 장점을 살려,
+					하루 단위의 피드백을 분석 하고 수렴하여<br class="pc_ver"> 좋은 제품과 콘텐트를 만들기 위해 늘 개선합니다.
+					고객 만족은 본질에 집중 했을 때<br class="pc_ver"> 이루어진다는 것을 이해하고 고객의 목소리에 귀를 기울입니다.
+				</p>
+			</div>			
+		</section>
+
+		<section class="adapt_is">
+			<h2 class="ani">ADAPT IS</h2>
+			<div class="cont">
+				<dl class="mg ani">
+					<dt>SOLVED<br class="mo_ver"> YOUR<br class="mo_ver"> PROBLEM</dt>
+					<dd>어댑트는 고객님들이 가지고 있는 문제와 니즈<br>해결에 집중하여 제품을 만듭니다.</dd>
+				</dl>
+				<dl class="ani">
+					<dt>BRAND<br class="mo_ver"> DEVELOPER</dt>
+					<dd>고객님들의 피드백을 바탕으로 꾸준히<br>찾을 수 있는 브랜드를 만들어갑니다.</dd>
+				</dl>
+				<dl class="ani">
+					<dt>CONTENTS<br class="mo_ver"> COMMERCE<br>LEADING<br class="mo_ver"> COMPANY</dt>
+					<dd>기존미디어와 뉴미디어를<br class="mo_ver"> 함께 활용하며<br>콘텐트를 통해<br class="mo_ver"> 고객님들과 소통합니다.</dd>
+				</dl>
+			</div>			
+		</section>
+
+		<section class="contents">
+			<h2 class="ani">CONTENTS</h2>		
+			<div class="text_scroll_wrap">
+				<div class="scroll_item">
+					<img src="https://www.adaptkorea.com/theme/adapt/img/logo_ODG.png" alt="ODG"> you were a kid once. <img src="https://www.adaptkorea.com/theme/adapt/img/logo_ODG.png" alt="ODG"> you were a kid once.
+				</div>			
+			</div>
+			<div class="ct_video">
+				<div class="ct_video_box">
+					<video muted loop autoplay playsinline>
+						<source src="https://www.adaptkorea.com/theme/adapt/video/iu_video.mp4" type="video/mp4">      
+					</video>
+				</div>				
+			</div>
+		</section>
+
+		<section class="we_make">
+			<div class="img"><img src="https://www.adaptkorea.com/theme/adapt/img/img_child.jpg" alt=""></div>
+			<div class="we_video">
+				<div class="we_video_box">
+					<video muted loop playsinline>
+						<source src="https://www.adaptkorea.com/theme/adapt/video/make_video.mp4" type="video/mp4">      
+					</video>
+				</div>
+			</div>
+			<dl>
+				<dt class="ani">WE MAKE THE ORIGINAL</dt>
+				<dd class="ani">
+					스튜디오 솔파는 미디어 환경에 좌지우지되지 않는<br>
+					오리지널 콘텐츠를 만들어냅니다.<br class="mo_ver"> 이는 빠르게 변하는 디지털 시대에도<br>
+					시청자들에게 끊임없는 새로움을 전달하기 위함입니다.
+				</dd>
+			</dl>
+		</section>
+
+		<section class="channel">
+			<div class="ch_top">
+				<div class="text_scroll_wrap">
+					<div class="scroll_item">
+						<img src="https://www.adaptkorea.com/theme/adapt/img/logo_solfa.png" alt="studio solfa"> we make original contents. <img src="https://www.adaptkorea.com/theme/adapt/img/logo_solfa.png" alt="studio solfa"> we make original contents.
+					</div>			
+				</div>
+				<div class="ch_video">
+					<div class="ch_video_box">
+						<video muted loop autoplay playsinline>
+							<source src="https://www.adaptkorea.com/theme/adapt/video/ideal_video.mp4" type="video/mp4">      
+						</video>
+					</div>				
+				</div>		
+			</div>
+			<div class="ch_bot infit">
+				<div class="lft ani">
+					<div class="">
+						<div class="ch_bot_video">
+							<video muted loop autoplay playsinline>
+								<source src="https://www.adaptkorea.com/theme/adapt/video/channel_video.mp4" type="video/mp4">      
+							</video>
+						</div>	
+					</div>
+				</div>
+				<div class="rgt ani">
+					<dl>
+						<dt>SOLFA, ODG, 1994, HUP!</dt>
+						<dd>
+							스튜디오 솔파는 총 4개의 유튜브 채널을 운영하고 있습니다.<br>
+							먼저 SOLFA는 인간을 주제로 한 다양한 장르의 이야기를 보여줍니다.<br>
+							ODG는 영상을 통해 어린 시절을 돌아볼 수 있게 합니다. 2021년 말에 런칭한<br class="pc_ver">
+							채널 1994는 94년생 PD가 조명하는 대한민국 서른 살들의 이야기,<br class="pc_ver">
+							채널 HUP은 음악이 삶에 들어와 몰입하게 되는 순간을 보여줍니다
+						</dd>
+					</dl>
+					<a href="https://www.studiosolfa.com/" title="studiosolfa">
+						<span class="btn">See more<img src="https://www.adaptkorea.com/theme/adapt/img/ico_arr.png" alt=""></span>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="muse">
+			<div class="pc_ver">
+				<video muted loop playsinline>
+					<source src="https://www.adaptkorea.com/theme/adapt/video/adapt_muse_pc.mp4" type="video/mp4">      
+				</video>
+			</div>
+			<div class="mo_ver">
+				<video muted loop playsinline>
+					<source src="https://www.adaptkorea.com/theme/adapt/video/adapt_muse_mo.mp4" type="video/mp4">      
+				</video>
+			</div>
+		</section>
+
+		<section class="contact">
+			<div class="contact_txt">
+				WE LISTEN<br class="mo_ver"> TO<br class="pc_ver">
+				OUR <span><img src="https://www.adaptkorea.com/theme/adapt/img/img_our.jpg" alt="" class="pc_ver"><img src="https://www.adaptkorea.com/theme/adapt/img/img_our_mo.jpg" alt="" class="mo_ver"></span><br>
+				CUSTOMER'S<br>
+				VOICE 
+				<div class="ani">
+					저희는 고객의 목소리를 듣습니다.<br class="pc_ver"><br class="mo_ver">
+					이것은 브랜드와 콘텐트를 개선하고<br class="pc_ver">
+					고객의 만족을 이끌어 내는 방식입니다.<br class="pc_ver"><br class="mo_ver">
+					본질에 집중하여 효능, 효과 있는 제품을 만들어내고<br class="pc_ver"><br class="mo_ver">
+					미디어 환경에 좌지우지 되지 않는<br class="pc_ver">
+					힘 있는 콘텐트를 제작합니다.
+				</div><br>
+				AND SOLVE<br class="mo_ver"> A<br class="pc_ver">
+				PROBLEM.
+			</div>
+			<div class="contact_more">
+				<a href="/contact_us/contact_us.php">
+					<p>
+						<span class="txt">CONTACT</span>
+						<span class="txt_svg">
+							<svg id="svg_US" width="69" height="63" viewBox="0 0 69 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path id="svg_U" d="M5.92 47.528C5.92 35.208 10.24 12.168 13.04 2.24801C11.92 1.04801 6.64 -0.471986 6.16 1.20802C4.24 8.40801 0 30.728 0 43.448C0 57.448 5.2 62.728 12.56 62.728C19.28 62.728 22.96 57.608 23.84 53.928C24.88 56.728 26.16 59.608 29.12 59.608C34.72 59.608 37.04 53.448 37.04 50.008C37.04 48.008 35.28 47.848 35.28 47.848C34.64 49.928 33.84 54.168 30.24 54.168C28 54.168 26.64 52.408 27.12 44.888C27.84 32.968 30.32 16.728 31.6 3.20802C30.8 2.32802 28.24 1.20802 26.64 1.20802C24.56 1.20802 24.72 2.48802 24.64 3.44802C20.64 38.248 20.48 57.448 10.96 57.448C8 57.448 5.92 55.208 5.92 47.528Z" />
+								<path id="svg_S" d="M36.9481 49.768C36.9481 45.848 39.7481 41.448 41.4281 39.768C40.9481 38.008 39.2681 37.048 37.0281 37.048C33.5081 37.048 31.4281 42.248 31.4281 45.848C31.4281 53.128 37.7481 62.408 47.9081 62.408C55.5881 62.408 63.5081 57.208 63.5081 46.728C63.5081 27.848 47.5081 16.968 44.1481 15.128C47.5881 12.168 62.3081 6.96801 62.3081 8.88801C62.3081 9.76802 59.5081 13.128 59.5081 13.848C59.5081 14.408 59.6681 14.728 60.2281 14.728C62.2281 14.728 68.3081 9.68802 68.3081 5.84802C68.3081 4.88802 65.3481 1.84801 63.9081 1.68802C55.9081 0.968015 35.1881 7.68801 35.3481 12.888C35.3481 13.528 37.1881 17.048 37.9081 17.128C43.1081 17.448 57.1081 27.688 57.1081 42.968C57.1081 51.688 51.1081 56.888 43.7481 56.888C38.9481 56.888 36.9481 52.888 36.9481 49.768Z" />
+							</svg>
+						</span>
+						<span class="txt">.</span>
+					</p>
+					<span class="btn">Hello. Contact us anytime<img src="https://www.adaptkorea.com/theme/adapt/img/ico_arr.png" alt=""></span>
+				</a>
+			</div>
+		</section>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.contents .text_scroll_wrap').marquee({
+			duration: 8500,
+			//gap: 100,
+			direction: 'left',
+			duplicated:true,
+			delayBeforeStart: 0
+		});
+
+		$('.channel .text_scroll_wrap').marquee({
+			duration: 8500,
+			//gap: 100,
+			direction: 'left',
+			duplicated:true,
+			delayBeforeStart: 0
+		});
+
+		// 메인 brand 슬라이드	
+		//영상 video 태그로 업로드 했을시 코드
+		 $(function(){	
+			var brandVideo = null;
+			var brandSwiper = new Swiper('.brand_slide .swiper-container', {			
+				slidesPerView: 1.7,
+				spaceBetween: 80,		
+				centeredSlides: true,
+				loop: true,
+				loopAdditionalSlides:1,
+				autoplay: {
+				  delay: 5000,
+				  disableOnInteraction: false,
+				},
+				autoplayDisableOnInteraction: true,
+				/*speed:500,*/
+				navigation: {
+					nextEl: ".brand_slide .next_btn",
+					prevEl: ".brand_slide .prev_btn",
+				},
+				breakpoints: {
+					1023: {
+						slidesPerView: 1,  //브라우저가 1024보다 클 때
+						spaceBetween: 0,
+					},
+				},
+				on: {
+					init: function(){
+						$('.brand_bi .brand_bi_item').removeClass('act');
+						$('.brand_bi .brand_bi_item').eq(this.realIndex).addClass('act');					
+					},
+					slideChangeTransitionEnd: function (swiper, swiperVideoPlay) {
+						$('.brand_bi .brand_bi_item').removeClass('act');
+						$('.brand_bi .brand_bi_item').eq(this.realIndex).addClass('act');			
+						if(brandVideo){      
+							brandVideo.pause();
+							brandVideo.currentTime = 0      
+						};
+						var child = this.slides[this.activeIndex].querySelector('video');
+						brandVideo = child;
+						if(child){            
+							child.play()
+						}  
+					},
+				},
+			});			
+			brandSwiper.slideTo(1);
+
+			$('.brand_slide_arr .next_btn').click(function(){
+				brandSwiper.autoplay.stop();
+			});
+
+			$('.brand_slide_arr .prev_btn').click(function(){
+				brandSwiper.autoplay.stop();
+			});
+
+		});
+
+
+		//영상 iframe vimeo 태그로 업로드 했을시 코드
+		/*
+		$(function(){	
+			var brandVideo = null;
+			var brandSwiper = new Swiper('.brand_slide .swiper-container', {			
+				slidesPerView: 1.7,
+				spaceBetween: 80,		
+				centeredSlides: true,
+				loop: true,
+				speed:500,
+				navigation: {
+					nextEl: ".brand_slide .next_btn",
+					prevEl: ".brand_slide .prev_btn",
+				},
+				breakpoints: {
+					1023: {
+						slidesPerView: 1,  //브라우저가 1024보다 클 때
+						spaceBetween: 0,
+					},
+				},
+				on: {
+					init: function(){
+						$('.brand_bi .brand_bi_item').removeClass('act');
+						$('.brand_bi .brand_bi_item').eq(this.realIndex).addClass('act');					
+					},					
+					slideChangeTransitionEnd: function (swiper, swiperVideoPlay) {
+						$('.brand_bi .brand_bi_item').removeClass('act');
+						$('.brand_bi .brand_bi_item').eq(this.realIndex).addClass('act');
+						if(brandVideo){      
+							brandVideo.pause();
+							brandVideo.currentTime = 0      
+						};
+						var child = this.slides[this.activeIndex].querySelector('iframe');
+						var player = new Vimeo.Player(child);
+						brandVideo = player;
+						if(player){            
+							player.play();
+						}
+					},
+				},
+			});			
+			brandSwiper.slideTo(1, false,false);
+		});
+		*/
+
+
+	});
+</script>
+
+
+	</div>
+	
+	<footer id="footer">
+		<div class="inner">
+			<div class="lft">				
+				<address>
+					Adapt Inc. 4F, 534, samsung-ro<br>
+					Gangnam-gu, Seoul<br>
+					Republic of Korea
+				</address>
+			</div>
+			<div class="rgt">
+				<dl class="mg">
+					<dt>Contact</dt>
+					<dd>cs@adaptkorea.com</dd>
+				</dl>
+				<dl>
+					<dt>Hiring</dt>
+					<dd>hr@adaptkorea.com</dd>
+				</dl>
+				<dl>
+					<dt>Phone</dt>
+					<dd>+82. 02. 6952. 3396</dd>
+				</dl>
+			</div>
+			<p class="copy">&copy; Adapt Inc. All rights reserved.</p>
+		</div>
+	</footer>
+</div>    
+
+<script src="https://www.adaptkorea.com/theme/adapt/js/publish.js"></script>
+
+
+
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+
+</body>
 </html>
